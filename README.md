@@ -116,34 +116,9 @@
 5) npx eslint src/* --fix
     아래 추가 내용 참고
 
-
-
-[Prettier]
-1) prettier 설치
-    npm install --save-dev --save-exact prettier
-
-2) .prettierrc.json 파일 생성
-    {
-        "trailingComma":"es5",
-        "tabWidth":4,
-        "semi":false,
-        "singleQuote":true
-    }
-
-3) ESLint rules과 Prettier의 충돌 시 처리
-    3-1)
-        $ npm i -D eslint-config-prettier
-        $ npm i -D eslint-plugin-prettier
-
-    3-2) .eslintrc.json
-        "plugin:prettier/recommended"
-
-4) prettier 실행
-    npx prettier --write src/App.tsx
-
 ```
 
-[ESLint] 초기 세팅 시 불필요한 오류 삭제
+#### [ESLint] 초기 세팅 시 불필요한 오류 삭제
 
 ```
 1) "react/jsx-filename-extension"
@@ -200,6 +175,33 @@
 
 
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
+```
+
+#### [Prettier]
+
+```
+1) prettier 설치
+    npm install --save-dev --save-exact prettier
+
+2) .prettierrc.json 파일 생성
+    {
+        "trailingComma":"es5",
+        "tabWidth":4,
+        "semi":false,
+        "singleQuote":true
+    }
+
+3) ESLint rules과 Prettier의 충돌 시 처리
+    3-1)
+        $ npm i -D eslint-config-prettier
+        $ npm i -D eslint-plugin-prettier
+
+    3-2) .eslintrc.json
+        "plugin:prettier/recommended"
+
+4) prettier 실행
+    npx prettier --write src/App.tsx
+
 ```
 
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
