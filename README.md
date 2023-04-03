@@ -23,7 +23,7 @@
             : Prettier - Code formatter로 수정
 ```
 
-#### [확장프로그램 설치]() (참고)
+#### [확장프로그램 설치] (참고)
 
 ```
 * Reactjs code snippets : rsc 명령어 등으로 코드 자동완성
@@ -31,12 +31,15 @@
 
 #### [구현기록]
 
+##### [CRA]
+
 ```
-* CRA
 1) npx create-react-app ems-front --template typescript
+```
 
-* eslint + prettier
+##### [eslint + prettier]
 
+```
 [ESLint]
 1) 더 좋은 세팅을 위해 package.json 에서 아래 지움
     "eslintConfig": {
