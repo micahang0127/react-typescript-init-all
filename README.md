@@ -118,7 +118,7 @@
 
 ```
 
-#### [ESLint] 초기 세팅 시 불필요한 오류 삭제
+##### [ESLint] 초기 세팅 시 불필요한 오류 삭제
 
 ```
 1) "react/jsx-filename-extension"
@@ -177,7 +177,7 @@
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
 ```
 
-#### [Prettier]
+##### [Prettier]
 
 ```
 1) prettier 설치
