@@ -37,6 +37,41 @@
 1) npx create-react-app ems-front --template typescript
 ```
 
+##### [초기 파일 삭제/변경]
+
+```
+- App.css
+- App.test.tsx
+- index.css
+- index.tsx
+- logo.svg
+
+
+
+[index.tsx] 내용변경
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+
+
+[App.tsx]
+
+function App() {
+  return <div className="App">React Init</div>
+}
+
+export default App
+
+```
+
 ##### [eslint + prettier]
 
 ```
@@ -159,6 +194,12 @@
         "extends":[
             "plugin:@typescript-eslint/recommended"
         ]
+5) 'React' must be in scope when using JSX  react/react-in-jsx-scope
+    해결 : .eslintrc.json 에 추가
+          "extends": [
+                "plugin:react/jsx-runtime"
+            ]
+
 
 
 ** 추가 사용할 규칙
@@ -197,52 +238,12 @@
         $ npm i -D eslint-plugin-prettier
 
     3-2) .eslintrc.json
-        "plugin:prettier/recommended"
+        "extends":[
+            "plugin:prettier/recommended"
+        ]
 
 4) prettier 실행
     npx prettier --write src/App.tsx
-
-```
-
-##### [초기 파일 삭제/변경]
-
-```
-App.css
-App.test.tsx
-index.css
-index.tsx
-logo.svg
-
-
-
-[App.tsx] 내용변경
-
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="login" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.asdsad
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
-}
-
-export default App
 
 ```
 
