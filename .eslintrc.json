@@ -5,9 +5,9 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:prettier/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "plugin:react/jsx-runtime"
   ],
   "parser": "@typescript-eslint/parser",
@@ -30,7 +30,10 @@
       }
     ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": ["off", { "singleQuote": true }],
+    "linebreak-style": 0,
+    "comma-dangle": ["error", "never"]
   },
   "settings": {
     "import/resolver": {
