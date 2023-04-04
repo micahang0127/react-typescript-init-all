@@ -204,4 +204,46 @@
 
 ```
 
+##### [초기 파일 삭제/변경]
+
+```
+App.css
+App.test.tsx
+index.css
+index.tsx
+logo.svg
+
+
+
+[App.tsx] 내용변경
+
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="login" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.asdsad
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  )
+}
+
+export default App
+
+```
+
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
