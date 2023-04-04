@@ -48,7 +48,6 @@
 - App.css
 - App.test.tsx
 - index.css
-- index.tsx
 - logo.svg
 
 
@@ -306,8 +305,7 @@ export default App
         "tabWidth": 2,
         "useTabs": false,
         "quoteProps": "as-needed",
-        "printWidth": 80,
-        "bracketSpacing": true
+        "printWidth": 80
     }
 
 
@@ -360,6 +358,14 @@ export default App
     }
   ], // 특정 파일별로 옵션을 다르게 지정함, ESLint 방식 사용
 }
+```
+
+##### [다국어처리 - i18n]
+
+```
+1) 설치
+    npm install react-i18next i18next
+
 ```
 
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
