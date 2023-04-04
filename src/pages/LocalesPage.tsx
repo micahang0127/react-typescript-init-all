@@ -1,20 +1,20 @@
-import { useCallback } from 'react';
+// import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function LocalesPage() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
 
-  const toggleLocales = useCallback(
-    (locale: string) => {
-      i18n.changeLanguage(locale);
-    },
-    [i18n]
-  );
+  // const toggleLocales = useCallback(
+  //   (locale: string) => {
+  //     i18n.changeLanguage(locale);
+  //   },
+  //   [i18n]
+  // );
 
   return (
     <div>
       <div>{t('test')}</div>
-      <div>
+      {/* <div>
         <button
           type="button"
           onClick={() => toggleLocales('en-US')}
@@ -29,7 +29,7 @@ function LocalesPage() {
         >
           ko
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

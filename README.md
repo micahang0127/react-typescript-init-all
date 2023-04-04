@@ -366,6 +366,10 @@ export default App
 1) 설치
     npm install react-i18next i18next
 
+[참고]
+https://velog.io/@zlemzlem5656/react-i18next-typescript
+https://github.com/micahang0127/react-basic-settings
+
 ```
 
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
