@@ -21,6 +21,11 @@
             : 파일저장 시 코드 eslint 적용 스타일로 변경
         3) default formatter 검색 -> Editor: Default Formmatter 수정
             : Prettier - Code formatter로 수정
+
+    * 위 설정으로 코드 저장 시, .prettierrc.json 에 정의된 문법으로 자동수정
+    * 코드 저장 시 ESLint 문법 충돌로 에러가 남아 있다면 아래 명령어 실행
+        $ npx eslint ./src --fix
+
 ```
 
 #### [확장프로그램 설치] (참고)
