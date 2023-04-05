@@ -1,3 +1,9 @@
 {
-  "test": "안녕하세요"
+  "test": "안녕하세요",
+  "obj-test": "{0}번째 테스트",
+  "obj-test-email": "{0} 테스트",
+  "placeholder": {
+    "login": "로그인해주세요",
+    "comment": "댓글을 남겨주세요"
+  }
 }

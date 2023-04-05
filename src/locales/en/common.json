@@ -1,3 +1,9 @@
 {
-  "test": "Hello"
+  "test": "Hello",
+  "obj-test": "this is test {0}",
+  "obj-test-email": "this is test {0}",
+  "placeholder": {
+    "login": "Please log in first",
+    "comment": "Leave a comment"
+  }
 }
