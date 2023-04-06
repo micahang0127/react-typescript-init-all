@@ -4,6 +4,10 @@
 
 ```
 * react + typescript (eslint + prettier )
+
+* i18next: "^22.4.14"
+
+* react-router-dom: "^6.10.0"
 ```
 
 #### [개발자 초기세팅]
@@ -417,5 +421,16 @@ React에서 빌드 시 이미지를 포함하는 방법은 크게 2가지이다.
 https://itchallenger.tistory.com/683
 
 ```
+
+##### [router]
+
+```
+1) 설치
+    npm i react-router-dom
+
+
+
+```
+
 
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
