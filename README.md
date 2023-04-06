@@ -372,4 +372,50 @@ https://github.com/micahang0127/react-basic-settings
 
 ```
 
+##### [public & assets]
+
+```
+* public VS assets
+
+React에서 빌드 시 이미지를 포함하는 방법은 크게 2가지이다. (CRA에서)
+1) public 디렉토리에 모든 것이 서버로 복사된다
+    번들러에 의해 처리되어 js 파일내로 임포트한다
+2) src 아래 모든 것이 JS 파일로 가져오게 된다.
+     절대 경로를 통해 url을 참조한다.
+
+=> 따라서,
+1) 이미지를 컴포넌트로 import 
+    1-1) 이미지 파일을 src폴더 아래 어딘가(src/assets/images/..) 에 넣는다
+    1-2) 이것만으로 바로 사용할수 없다. React 컴포넌트로 가져와야 한다.
+
+    ex> import companyLogo from './path/to/logo.jpg';
+
+2) 이미지파일을 public 디렉토리에
+    이미지 파일을 퍼블릭 폴더에 넣을 수 있다(Create React App이 아닌 경우 서버에 복사될 폴더에 놓을 수 있다)
+    퍼블릭 폴더를 "root" 디렉토리(/)로 취급한다고 가정하면(public/images/thing.jpg) 아래와 같이 사용한다.
+
+    file  public/images/thing.jpg
+    ex>  <img src="images/logo.jpg" alt="BigCo Inc. logo"/>
+
+    이 방법을 사용하면 웹 서버에서 이미지를 일반 파일로 사용할 수 있고
+    브라우저에서 http://localhost:3000/images/logo.jpg(또는 실제 도메인 이름) 경로로 해당 파일을 오픈할 수 있다.
+
+
+무엇을 사용해야 하는가)
+    일회성 이미지의 경우 import를 사용하는 것이 좋다.
+    1) src 파일 안에 이미지를 import 하여 사용 할 경우, 전처리되어 번들링이 되고, 퍼블릭 폴더의 어떤 파일도 전처리되거나 최적화되지 않는다.
+    2) assets은 누락된 파일이 있을 경우 배포후 404 오류 대신, 컴파일 시 오류를 발생시켜 배포 전, 오류를 발견할수 있다. 반면, public폴더 내에는 파일이 누락되어도 해당 파일은 컴파일 시간에 호출되지 않기에, 사용자에게 404 오류가 발생할 수 있다.
+    3) assets은 결과 파일 이름에는 콘텐츠 해시가 포함되므로 브라우저가 이전 버전을 캐싱하는 것에 대해 걱정할 필요가 없다.
+    public 폴더 내에는 파일 이름에 콘텐츠 해시가 포함되지 않으므로 해당 파일이 변경될 때마다 (소스에서) 쿼리 인수를 추가하거나 해당파일의 이름을 바꿔야 한다. 
+
+    => 즉, 기본적으로 앱에 포함되는 리소스는 에셋 형태로 번들링 하는 것이 좋습니다.
+    하지만 실제 개발 시, 사용할 모든 이미지를 import 를 명시하여 사용하기란 매우 불편한 사항이었다. 
+    때문에 나는 이미지 파일은 public에 넣어 사용 하고, css, js 파일들은 assets에서 관리하는 방법을 택하였다.
+
+
+[참고]
+https://itchallenger.tistory.com/683
+
+```
+
 [참고] https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95
